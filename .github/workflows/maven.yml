@@ -16,13 +16,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Package with Maven
-      run: mvn package
-    - name: Deploy Package to registry
-      run: mvn deploy
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Run Hello World
+      run: echo "Hello World" 
+    #- name: Set up JDK 1.8
+    #  uses: actions/setup-java@v1
+    #  with:
+    #    java-version: 1.8
+    #- name: Package with Maven
+    #  run: mvn package
+    #- name: Deploy Package to registry
+    #  run: mvn deploy
+    #  env:
+    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
