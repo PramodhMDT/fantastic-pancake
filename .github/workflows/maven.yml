@@ -23,4 +23,6 @@ jobs:
     - name: Package with Maven
       run: mvn package
     - name: Deploy Package to registry
-      run: mvn deploy -Dregistry=https://maven.pkg.github.com/PramodhMDT -Dtoken=GITHUB_TOKEN
+      run: mvn deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
