@@ -21,6 +21,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Compile with Maven
-      run: mvn compile
-    - name: Hello Message
-      run: echo "Hello"
+      run: mvn package
